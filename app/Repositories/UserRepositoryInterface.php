@@ -1,6 +1,9 @@
-namespace App\Repositories
+<?php
 
-interface UserRepositoryInterface{
-public function all();
-public function find($id);
+namespace App\Repositories;
+
+interface UserRepositoryInterface
+{
+    public function all();
+    public function find($id);
 }
