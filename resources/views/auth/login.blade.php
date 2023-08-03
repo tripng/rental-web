@@ -45,7 +45,7 @@
                     {{ __('Belum punya akun?') }}
                 </a>
             </div>
-            <x-primary-button class="w-full justify-center bg-indigo-600 hover:bg-indigo-900">
+            <x-primary-button class="w-full justify-center ">
                 {{ __('Masuk') }}
             </x-primary-button>
             <x-link-button href="{{ route('auth.google') }}"

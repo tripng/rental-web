@@ -30,7 +30,7 @@
 
         <!-- Confirm Password -->
         <div class="mt-4">
-            <x-input-label for="password_confirmation" :value="__('Konfirmas Kata Sandi')" />
+            <x-input-label for="password_confirmation" :value="__('Konfirmasi Kata Sandi')" />
 
             <x-text-input id="password_confirmation" class="block mt-1 w-full" type="password"
                 name="password_confirmation" required autocomplete="new-password" />
@@ -47,8 +47,6 @@
             </x-primary-button>
             <x-link-button href="{{ route('auth.google') }}"
                 class="w-full justify-center bg-slate-50 hover:bg-slate-400 text-black border-gray-700">
-                {{--<img src="https://developers.google.com/identity/images/btn_google_signin_dark_normal_web.png"
-                    style="margin-left: 3em;height: 40px;border-radius: 12px">--}}
                 <img src="{{ asset('images/google.png') }}" class="mr-2" alt="google-icon" width="20">
                 {{ __('Daftar dengan Google') }}
             </x-link-button>
