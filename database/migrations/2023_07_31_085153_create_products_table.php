@@ -19,7 +19,7 @@ return new class extends Migration
             $table->integer('stock');
             $table->bigInteger('quantity_sold')->default(0);
             $table->integer('rating');
-            $table->$table->$table->timestamps();
+            $table->timestamps();
         });
     }
 

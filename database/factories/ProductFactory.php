@@ -16,17 +16,20 @@ class ProductFactory extends Factory
      */
     public function definition(): array
     {
-        $name_product = collcet([
+        $name_product = [
             'Kostum Cosplay Anime Jepang Anak Nezuko',
             'Kostum Cosplay Anime Spy X Family Anya',
             'Jaket Genshin Impact Kostum Anime Hoodie',
             'Jaket Naruto Hokage 7 - Kostum Anime Cosplay',
             'Kostum Cosplay Anime Jujutsu Kaisen'
-        ]);
+        ];
         return [
-            'name' => fake()->randomElement(),
-            'desciription' => fake()->paragraphs(random_int(3, 6)),
-            // 'decimal' => 
+            'name' => fake()->randomElement($name_product),
+            'description' => fake()->paragraphs(random_int(3, 6)),
+            'price' => fake()->numberBetween(100000, 1000000),
+            'stock' => fake()->randomNumber(3, true),
+            'quantity_sold' => fake()->randomNumber(3, false),
+            'rating' => fake()->numberBetween(1, 5)
         ];
     }
 }
