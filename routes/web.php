@@ -28,7 +28,6 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__ . '/auth.php';
-Route::get('/tes', [ProfileController::class, 'allUsers']);
 
 Route::controller(App\Http\Controllers\Auth\GoogleController::class)->group(function () {
     Route::get('social/google', 'redirect')->name('auth.google');
