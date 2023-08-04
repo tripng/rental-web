@@ -33,9 +33,10 @@ class GoogleController extends Controller
                 $newUser = User::updateOrCreate(['email' => $user->email],[
                     'name' => $user->name,
                     'google_id'=> $user->id,
-                    'password' => encrypt('123456dummy')
+                    'email_verified_at' => date('Y-m-d H:i:s'),
+                    'password' => encrypt('123123'),
                 ]);
-
+                $newUser->markEmailAsVerified();
                 Auth::login($newUser);
 
                 return redirect()->intended('dashboard');
