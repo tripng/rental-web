@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Main\MainController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,9 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [MainController::class, 'index']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -28,11 +27,10 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
 Route::get('/tes', [ProfileController::class, 'allUsers']);
 
-Route::controller(App\Http\Controllers\Auth\GoogleController::class)->group(function(){
+Route::controller(App\Http\Controllers\Auth\GoogleController::class)->group(function () {
     Route::get('social/google', 'redirect')->name('auth.google');
     Route::get('social/google/callback', 'googleCallback');
 });
-
