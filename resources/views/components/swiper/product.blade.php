@@ -1,22 +1,17 @@
-<div class="swiper banner-swiper rounded-lg group">
+@props(['data' => []])
+
+<div class="swiper category-swiper rounded-lg group">
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper rounded-lg">
         <!-- Slides -->
-        <div class="swiper-slide ">
-            <div class="aspect-[3/1]">
-                <img class="object-cover h-full w-full rounded-lg" src="https://placehold.co/100" alt="slide">
-            </div>
+        @dd(json_decode($data))
+        @foreach (json_decode($data) as $index => $v)
+        <div class="aspect-[3/4]">
+            {{--<img class="object-cover h-full w-full rounded-lg" src="https://placehold.co/{{$i*20}}" alt="slide">--}}
+            <h2>{{$index}}</h2>
+            <h2>{{$v}}</h2>
         </div>
-        <div class="swiper-slide">
-            <div class="aspect-[3/1]">
-                <img class="object-cover h-full w-full rounded-lg" src="https://placehold.co/200" alt="slide">
-            </div>
-        </div>
-        <div class="swiper-slide">
-            <div class="aspect-[3/1]">
-                <img class="object-cover h-full w-full rounded-lg" src="https://placehold.co/300" alt="slide">
-            </div>
-        </div>
+        @endforeach
     </div>
     <!-- If we need pagination -->
     <div class="swiper-pagination"></div>

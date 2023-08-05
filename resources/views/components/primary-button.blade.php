@@ -1,4 +1,4 @@
-@props(['color' => 'indigo', 'type' => 'primary'])
+@props(['type' => 'primary'])
 
 @php
 switch ($type) {
