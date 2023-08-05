@@ -46,7 +46,6 @@ var product = new Swiper(".product-swiper", {
         prevEl: ".swiper-button-prev",
     },
     effect: "slide",
-    autoplay: true,
     speed: 1000,
     slidesPerView: 2,
     slidesPerGroup: 2,
