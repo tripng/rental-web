@@ -11,14 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('products', function (Blueprint $table) {
+        Schema::create('banners', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->longText('description');
-            $table->decimal('price', $precision = 8, $scale = 2);
-            $table->integer('stock');
-            $table->bigInteger('quantity_sold')->default(0);
-            $table->integer('rating');
+            $table->string('path');
             $table->boolean('is_published')->default(true);
             $table->timestamps();
         });
@@ -29,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('products');
+        Schema::dropIfExists('banners');
     }
 };
