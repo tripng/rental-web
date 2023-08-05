@@ -1,15 +1,18 @@
-@props(['data' => []])
-
-<div class="swiper category-swiper rounded-lg group">
+<div class="swiper product-swiper rounded-lg group">
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper rounded-lg">
         <!-- Slides -->
-        @dd(json_decode($data))
-        @foreach (json_decode($data) as $index => $v)
-        <div class="aspect-[3/4]">
-            {{--<img class="object-cover h-full w-full rounded-lg" src="https://placehold.co/{{$i*20}}" alt="slide">--}}
-            <h2>{{$index}}</h2>
-            <h2>{{$v}}</h2>
+        @foreach ($data as $index => $value) <div class="swiper-slide">
+            <div class="aspect-[3/4] bg-white">
+                <div class="aspect-[1/1]">
+                    <img class="object-cover h-full w-full rounded-lg" src="https://placehold.co/{{$index*20}}"
+                        alt="slide">
+                </div>
+                <div class="p-1">
+                    <h2 class="text-md">{{$value->name}}</h2>
+                    <span class="text-md">@money($value->price)</span>
+                </div>
+            </div>
         </div>
         @endforeach
     </div>

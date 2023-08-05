@@ -28,7 +28,7 @@ class ProductFactory extends Factory
             'description' => fake()->paragraph(random_int(3, 6)),
             'price' => fake()->numberBetween(100000, 1000000),
             'stock' => fake()->randomNumber(3, true),
-            'quantity_sold' => fake()->randomNumber(3, false),
+            'quantity' => fake()->randomNumber(3, false),
             'rating' => fake()->numberBetween(1, 5)
         ];
     }

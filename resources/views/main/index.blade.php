@@ -18,7 +18,7 @@
                     </div>
                 </x-card>
                 <h2 class="text-2xl font-semibold">Rekomendasi</h2>
-                <x-swiper.product data="{{$products}}" />
+                <x-swiper.product :data="$products" />
             </div>
         </div>
     </div>

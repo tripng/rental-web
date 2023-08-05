@@ -39,7 +39,7 @@ var category = new Swiper(".category-swiper", {
         },
     },
 });
-var category = new Swiper(".category-swiper", {
+var product = new Swiper(".product-swiper", {
     // configure Swiper to use modules
     navigation: {
         nextEl: ".swiper-button-next",

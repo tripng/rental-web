@@ -17,7 +17,7 @@ return new class extends Migration
             $table->longText('description');
             $table->decimal('price', $precision = 8, $scale = 2);
             $table->integer('stock');
-            $table->bigInteger('quantity_sold')->default(0);
+            $table->bigInteger('quantity')->default(0);
             $table->integer('rating');
             $table->boolean('is_published')->default(true);
             $table->timestamps();
