@@ -16,12 +16,12 @@
                 </x-nav-link>
             </div>-->
             <div class="flex items-center w-full">
-                <div class="hidden md:flex border-2 border-indigo-500 w-full rounded-lg">
+                <div class="hidden md:flex border-2 border-indigo-600 w-full rounded-lg">
                     <input
                         class="my-auto border-none border-transparent focus:border-transparent focus:ring-0 w-full rounded-lg"
                         type="text" placeholder="Mau jadi apa hari ini?" />
                     <button type="button"
-                        class="bg-indigo-600 px-4 rounded-r-md hover:bg-indigo-700 active:bg-indigo-800">
+                        class="bg-indigo-600 px-4 rounded-r-sm hover:bg-indigo-700 active:bg-indigo-800">
                         <x-heroicon-o-magnifying-glass class="h-6 w-6 text-white" />
                     </button>
                 </div>

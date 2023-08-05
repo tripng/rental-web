@@ -1,4 +1,4 @@
-<div class="aspect-[3/4] bg-white">
+<a href="#" class="aspect-[3/4] bg-white">
     <div class="aspect-[1/1]">
         <img class="object-cover h-full w-full rounded-lg" src="https://placehold.co/{{$index*20}}" alt="slide">
     </div>
@@ -13,4 +13,4 @@
             <span class="pl-2 mt-1">10 Tersewakan</span>
         </div>
     </div>
-</div>
+</a>

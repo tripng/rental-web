@@ -3,7 +3,7 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-
+use App\Models\Product;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Product>
  */
@@ -23,8 +23,9 @@ class ProductFactory extends Factory
             'Jaket Naruto Hokage 7 - Kostum Anime Cosplay',
             'Kostum Cosplay Anime Jujutsu Kaisen'
         ];
+        $name = fake()->randomElement($name_product);
         return [
-            'name' => fake()->randomElement($name_product),
+            'name' => $name,
             'description' => fake()->paragraph(random_int(3, 6)),
             'price' => fake()->numberBetween(100000, 1000000),
             'stock' => fake()->randomNumber(3, true),
