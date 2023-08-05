@@ -45,8 +45,13 @@
             <x-primary-button class="w-full justify-center bg-indigo-600 hover:bg-indigo-900">
                 {{ __('Daftar') }}
             </x-primary-button>
+            <div class="flex align-middle py-3">
+                <hr class="w-1/2 my-auto border-gray-100 border-y-2">
+                <span class="text-xs whitespace-nowrap px-2 text-gray-400 font-semibold">atau masuk dengan</span>
+                <hr class="w-1/2 my-auto border-gray-100 border-y-2">
+            </div>
             <x-link-button href="{{ route('auth.google') }}"
-                class="w-full justify-center bg-slate-50 hover:bg-slate-400 text-black border-gray-700">
+                class="w-full justify-center bg-slate-50 hover:bg-slate-400 text-black border-gray-700" type="">
                 <img src="{{ asset('images/google.png') }}" class="mr-2" alt="google-icon" width="20">
                 {{ __('Daftar dengan Google') }}
             </x-link-button>

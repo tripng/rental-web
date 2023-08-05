@@ -37,19 +37,24 @@
                 @if (Route::has('password.request'))
                 <a class="underline text-sm text-indigo-600 hover:text-indigo-900 rounded-md focus:outline-none"
                     href="{{ route('password.request') }}">
-                    {{ __('Lupa Password?') }}
+                    {{ __('Lupa Kata Sandi?') }}
                 </a>
                 @endif
                 <a class="underline text-sm text-indigo-600 hover:text-indigo-900 rounded-md focus:outline-none"
                     href="{{ route('register') }}">
-                    {{ __('Belum punya akun?') }}
+                    {{ __('Daftar') }}
                 </a>
             </div>
-            <x-primary-button class="w-full justify-center ">
+            <x-primary-button class="w-full justify-center">
                 {{ __('Masuk') }}
             </x-primary-button>
+            <div class="flex align-middle py-3">
+                <hr class="w-1/2 my-auto border-gray-100 border-y-2">
+                <span class="text-xs whitespace-nowrap px-2 text-gray-400 font-semibold">atau masuk dengan</span>
+                <hr class="w-1/2 my-auto border-gray-100 border-y-2">
+            </div>
             <x-link-button href="{{ route('auth.google') }}"
-                class="w-full justify-center bg-slate-50 hover:bg-slate-400 text-black border-gray-700">
+                class="w-full justify-center bg-slate-50 hover:bg-slate-400 text-black border-gray-700" type="">
                 {{--<img src="https://developers.google.com/identity/images/btn_google_signin_dark_normal_web.png"
                     style="margin-left: 3em;height: 40px;border-radius: 12px">--}}
                 <img src="{{ asset('images/google.png') }}" class="mr-2" alt="google-icon" width="20">

@@ -1,25 +1,48 @@
-<nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
-    <!-- Primary Navigation Menu -->
+<nav x-data="{ open: false, openCart: false }" class="bg-white border-b border-gray-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
+        <div class="flex justify-between h-16 space-x-8">
             <div class="flex">
-                <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
+                    <a href="{{ route('homepage') }}">
                         <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
                     </a>
                 </div>
+            </div>
 
-                <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
-                    </x-nav-link>
+            <!-- Navigation Links -->
+            <!--<div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                            {{ __('Dashboard') }}
+                </x-nav-link>
+            </div>-->
+            <div class="flex items-center w-full">
+                <div class="flex border-2 border-indigo-500 w-full rounded-lg">
+                    <input
+                        class="my-auto border-none border-transparent focus:border-transparent focus:ring-0 w-full rounded-lg"
+                        type="text" placeholder="Mau jadi apa hari ini?" />
+                    <button type="button"
+                        class="bg-indigo-600 px-4 rounded-r-sm hover:bg-indigo-700 active:bg-indigo-800">
+                        <x-heroicon-o-magnifying-glass class="h-6 w-6 text-white" />
+                    </button>
                 </div>
             </div>
-            @if (Auth::check())
-            <!-- Settings Dropdown -->
-            <div class="hidden sm:flex sm:items-center sm:ml-6">
+            <div class="flex items-center">
+                <x-dropdown align="right" width="48">
+                    <x-slot name="trigger">
+                        <button type="button" class="mt-1">
+                            <x-heroicon-o-shopping-cart class="h-6 w-6" />
+                        </button>
+                    </x-slot>
+
+                    <x-slot name="content">
+                        <div class="text-center p-3">
+                            <span class="text-sm">Keranjang belanjamu masih kosong</span>
+                        </div>
+                    </x-slot>
+                </x-dropdown>
+            </div>
+            <div class="hidden sm:flex sm:items-center sm:ml-6 space-x-2">
+                @if (Auth::check())
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
                         <button
@@ -47,14 +70,21 @@
                             @csrf
 
                             <x-dropdown-link :href="route('logout')" onclick="event.preventDefault();
-                                                this.closest('form').submit();">
+                                                    this.closest('form').submit();">
                                 {{ __('Log Out') }}
                             </x-dropdown-link>
                         </form>
                     </x-slot>
                 </x-dropdown>
+                @else
+                <x-link-button href="{{route('login')}}" class="mr-2">
+                    {{ __('Masuk') }}
+                </x-link-button>
+                <x-link-button href="{{route('register')}}" type="ghost">
+                    {{ __('Daftar') }}
+                </x-link-button>
+                @endif
             </div>
-            @endif
             <!-- Hamburger -->
             <div class="-mr-2 flex items-center sm:hidden">
                 <button @click="open = ! open"
