@@ -16,6 +16,7 @@ class ProductController extends Controller
         $this->productRepository = App::make(ProductRepository::class);
         return view('main.product', [
             'product' => $this->productRepository->find($slug),
+            'products' => $this->productRepository->all(),
         ]);
     }
 }

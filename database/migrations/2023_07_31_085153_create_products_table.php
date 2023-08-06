@@ -19,7 +19,7 @@ return new class extends Migration
             $table->decimal('price', $precision = 8, $scale = 2);
             $table->integer('stock');
             $table->bigInteger('quantity')->default(0);
-            $table->integer('rating')->default(0);
+            $table->float('rating')->default(0);
             $table->integer('rented')->default(0);
             $table->boolean('is_published')->default(true);
             $table->timestamps();

@@ -2,17 +2,20 @@
     <div class="swiper-wrapper rounded-lg">
         <div class="swiper-slide ">
             <div class="aspect-[3/1]">
-                <img class="object-cover h-full w-full rounded-lg" src="https://placehold.co/100" alt="slide">
+                <img loading="lazy" class="object-cover h-full w-full rounded-lg" src="https://placehold.co/100"
+                    alt="slide">
             </div>
         </div>
         <div class="swiper-slide">
             <div class="aspect-[3/1]">
-                <img class="object-cover h-full w-full rounded-lg" src="https://placehold.co/200" alt="slide">
+                <img loading="lazy" class="object-cover h-full w-full rounded-lg" src="https://placehold.co/200"
+                    alt="slide">
             </div>
         </div>
         <div class="swiper-slide">
             <div class="aspect-[3/1]">
-                <img class="object-cover h-full w-full rounded-lg" src="https://placehold.co/300" alt="slide">
+                <img loading="lazy" class="object-cover h-full w-full rounded-lg" src="https://placehold.co/300"
+                    alt="slide">
             </div>
         </div>
     </div>

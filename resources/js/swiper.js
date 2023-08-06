@@ -2,7 +2,6 @@ import Swiper from "swiper/bundle";
 Swiper.use([Swiper.Navigation]);
 
 var banner = new Swiper(".banner-swiper", {
-    // configure Swiper to use modules
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -15,7 +14,6 @@ var banner = new Swiper(".banner-swiper", {
     loop: true,
 });
 var category = new Swiper(".category-swiper", {
-    // configure Swiper to use modules
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -28,7 +26,6 @@ var category = new Swiper(".category-swiper", {
     spaceBetween: "10",
     loop: true,
     breakpoints: {
-        // when window width is >= 640px
         720: {
             slidesPerView: 6,
             slidesPerGroup: 3,
@@ -40,7 +37,6 @@ var category = new Swiper(".category-swiper", {
     },
 });
 var product = new Swiper(".product-swiper", {
-    // configure Swiper to use modules
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -52,7 +48,6 @@ var product = new Swiper(".product-swiper", {
     spaceBetween: "10",
     loop: true,
     breakpoints: {
-        // when window width is >= 640px
         720: {
             slidesPerView: 4,
             slidesPerGroup: 4,

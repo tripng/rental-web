@@ -1,8 +1,12 @@
 <div class="swiper category-swiper rounded-lg group">
     <div class="swiper-wrapper rounded-lg">
-        @for ($i = 1; $i < 17; $i++) <div class="swiper-slide ">
-            <div class="aspect-[1/1]">
-                <img class="object-cover h-full w-full rounded-lg" src="https://placehold.co/{{$i*20}}" alt="slide">
+        @for ($i = 1; $i < 17; $i++) <div class="swiper-slide">
+            <div class="flex flex-col items-center space-y-2">
+                <div class="aspect-[1/1] w-full">
+                    <img loading="lazy" class="object-cover h-full w-full rounded-lg"
+                        src="https://placehold.co/{{$i*20}}" alt="slide">
+                </div>
+                <span class="mx-auto text-sm font-bold">Tag {{$i}}</span>
             </div>
     </div>
     @endfor

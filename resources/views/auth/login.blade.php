@@ -55,7 +55,7 @@
             </div>
             <x-link-button href="{{ route('auth.google') }}"
                 class="w-full justify-center bg-slate-50 hover:bg-slate-400 text-black border-gray-700" variant="">
-                <img src="{{ asset('images/google.png') }}" class="mr-2" alt="google-icon" width="20">
+                <img src="{{ asset('images/google.png') }}" loading="lazy" class="mr-2" alt="google-icon" width="20">
                 {{ __('Masuk Dengan Google') }}
             </x-link-button>
         </div>
