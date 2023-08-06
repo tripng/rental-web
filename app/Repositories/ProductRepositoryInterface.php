@@ -5,7 +5,7 @@ namespace App\Repositories;
 interface ProductRepositoryInterface
 {
     public function all();
-    public function find($id);
+    public function find($slug);
     public function store();
-    public function delete($id);
+    public function delete($slug);
 }

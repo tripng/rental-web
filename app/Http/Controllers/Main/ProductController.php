@@ -8,14 +8,14 @@ use App\Http\Controllers\Controller;
 use App\Repositories\ProductRepository;
 use App\Repositories\ProductRepositoryInterface;
 
-class MainController extends Controller
+class ProductController extends Controller
 {
     private ProductRepository $productRepository;
-    public function index()
+    public function index($slug)
     {
         $this->productRepository = App::make(ProductRepository::class);
-        return view('main.index', [
-            'products' => $this->productRepository->all(),
+        return view('main.product', [
+            'product' => $this->productRepository->find($slug),
         ]);
     }
 }

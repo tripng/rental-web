@@ -1,7 +1,7 @@
-@props(['type' => 'primary'])
+@props(['variant' => 'primary', 'addClass' => 'px-4 py-3'])
 
 @php
-switch ($type) {
+switch ($variant) {
 case 'primary':
 $customClasses = 'text-white bg-indigo-600 focus:bg-indigo-700 active:bg-indigo-900 hover:bg-indigo-900
 focus:ring-indigo-500
@@ -16,9 +16,9 @@ $customClasses = '';
 break;
 }
 @endphp
-<button {{ $attributes->merge(['type' => 'submit', 'class' => 'inline-flex items-center px-4 py-3 border
+<button {{ $attributes->merge(['type' => 'submit', 'class' => 'inline-flex items-center border
     rounded-lg font-bold text-xs uppercase tracking-widest
     focus:outline-none focus:ring-2 focus:ring-offset-2
-    transition ease-in-out duration-150 '.$customClasses]) }}>
+    transition ease-in-out duration-150 '.$customClasses.' '.$addClass]) }}>
     {{ $slot }}
 </button>

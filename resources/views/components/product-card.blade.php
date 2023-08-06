@@ -1,4 +1,4 @@
-<a href="#" class="aspect-[3/4] bg-white">
+<a href="{{route('product.details', $data->slug)}}" class="aspect-[3/4] bg-white">
     <div class="aspect-[1/1]">
         <img class="object-cover h-full w-full rounded-lg" src="https://placehold.co/{{$index*20}}" alt="slide">
     </div>

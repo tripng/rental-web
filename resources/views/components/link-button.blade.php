@@ -1,7 +1,7 @@
-@props(['color' => 'indigo', 'type' => 'primary'])
+@props(['color' => 'indigo', 'variant' => 'primary'])
 
 @php
-switch ($type) {
+switch ($variant) {
 case 'primary':
 $customClasses = 'text-white bg-indigo-600 focus:bg-indigo-700 active:bg-indigo-900 hover:bg-indigo-900
 focus:ring-indigo-500

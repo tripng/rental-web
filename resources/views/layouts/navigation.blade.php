@@ -80,7 +80,7 @@
                 <x-link-button href="{{route('login')}}" class="mr-2">
                     {{ __('Masuk') }}
                 </x-link-button>
-                <x-link-button href="{{route('register')}}" type="ghost">
+                <x-link-button href="{{route('register')}}" variant="ghost">
                     {{ __('Daftar') }}
                 </x-link-button>
                 @endif

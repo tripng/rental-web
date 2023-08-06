@@ -11,14 +11,14 @@ class ProductRepository implements ProductRepositoryInterface
     {
         return Product::all();
     }
-    public function find($id)
+    public function find($slug)
     {
-        return Product::find($id);
+        return Product::where('slug', $slug)->first();
     }
     public function store()
     {
     }
-    public function delete($id)
+    public function delete($slug)
     {
     }
 }

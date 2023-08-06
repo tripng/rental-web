@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Main\MainController;
+use App\Http\Controllers\Main\ProductController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -33,3 +34,5 @@ Route::controller(App\Http\Controllers\Auth\GoogleController::class)->group(func
     Route::get('social/google', 'redirect')->name('auth.google');
     Route::get('social/google/callback', 'googleCallback');
 });
+
+Route::get('/{slug}', [ProductController::class, 'index'])->name('product.details');
