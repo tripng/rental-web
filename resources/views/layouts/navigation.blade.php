@@ -27,6 +27,8 @@
                 </div>
             </div>
             <div class="flex items-center">
+
+                @if (Auth::check())
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
                         <button type="button" class="mt-1">
@@ -40,6 +42,11 @@
                         </div>
                     </x-slot>
                 </x-dropdown>
+                @else
+                <a href="{{route('login')}}" class="mt-1">
+                    <x-heroicon-o-shopping-cart class="h-6 w-6" />
+                </a>
+                @endif
             </div>
             <div class="hidden sm:flex sm:items-center sm:ml-6 space-x-2">
                 @if (Auth::check())
